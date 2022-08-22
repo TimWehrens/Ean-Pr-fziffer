@@ -1,0 +1,80 @@
+<html>
+      <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <title>Prüfziffer</title>
+		
+	  <script>
+			"use strict";
+
+			function clicked1() {
+			
+			var veingabe1 ; 
+			var veingabe2 ;
+            var veingabe3 ;
+            var veingabe4 ;
+            var veingabe5 ;
+            var veingabe6 ;
+            var veingabe7;
+            var veingabe8;
+            var veingabe9;
+            var veingabe10;
+            var veingabe11;
+            var veingabe12;
+           
+            veingabe1=parseFloat(document.getElementById("ideingabe2").value);
+           veingabe2=parseFloat(document.getElementById("ideingabe2").value);
+           veingabe3=parseFloat(document.getElementById("ideingabe3").value);
+           veingabe4=parseFloat(document.getElementById("ideingabe4").value);
+           veingabe5=parseFloat(document.getElementById("ideingabe5").value);
+           veingabe6=parseFloat(document.getElementById("ideingabe6").value);
+           veingabe7=parseFloat(document.getElementById("ideingabe7").value);
+           veingabe8=parseFloat(document.getElementById("ideingabe8").value);
+           veingabe9=parseFloat(document.getElementById("ideingabe9").value);
+           veingabe10=parseFloat(document.getElementById("ideingabe10").value);
+           veingabe11=parseFloat(document.getElementById("ideingabe11").value);
+           veingabe12=parseFloat(document.getElementById("ideingabe12").value);
+           
+           var vPrüfziffer
+           var vAusgabe
+           var vPrüfsumme
+
+           vPrüfsumme=(veingabe1*1)+(veingabe2*3)+(veingabe3*1)+(veingabe4*3)+(veingabe5*1)+(veingabe6*3)+(veingabe7*1)+(veingabe8*3)+(veingabe9*1)+(veingabe10*3)+(veingabe11*1)+(veingabe12*3)
+   
+          vPrüfziffer=10-(vPrüfsumme%10)
+          if (vPrüfziffer==10){
+              vPrüfziffer=0
+          }
+          
+         vAusgabe= "Die Prüfsumme ist: " +vPrüfsumme+ " und die Prüfziffer ist: " +vPrüfziffer;
+				
+				document.getElementById("idAusgabe").innerHTML=vAusgabe
+
+        }
+				
+
+	  </script>
+	  </head>
+
+	  <body>
+		<h1>Prüfziffer</h1>
+		Ean: <input id="ideingabe1" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe2" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe3" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe4" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe5" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe6" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe7" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe8" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe9" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe10" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe11" type="text" value="2" maxlength="1" size="1">
+        <input id="ideingabe12" type="text" value="2" maxlength="1" size="1"><br><br>
+        
+        
+        <button onclick="clicked1();">Berechne</button><br><br>
+
+		<div id="idAusgabe"></div>
+	
+       
+       </body>
+</html>
